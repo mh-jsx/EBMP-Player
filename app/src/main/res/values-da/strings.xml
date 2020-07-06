@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="action_settings">Indstillinger</string>
+
+    <string name="accessibility_play">Afspil</string>
+    <string name="accessibility_pause">Pause</string>
+    <string name="accessibility_next">N�ste</string>
+    <string name="accessibility_prev">Forrige</string>
+    <string name="accessibility_shuffle">Bland</string>
+    <string name="accessibility_shuffle_all">Bland alle</string>
+    <string name="accessibility_repeat">Gentag</string>
+    <string name="accessibility_repeat_all">Gentag alle</string>
+    <string name="accessibility_repeat_one">Gentag �n</string>
+    <string name="accessibility_queue">�bn k�</string>
+    <string name="accessibility_browse">Gennemse musik</string>
+
+    <string name="menu_sort_by">Sort�r</string>
+    <string name="sort_order_entry_az">A-Z</string>
+    <string name="sort_order_entry_za">Z-A</string>
+    <string name="sort_order_entry_artist">Kunstner</string>
+    <string name="sort_order_entry_album">Album</string>
+    <string name="sort_order_entry_year">�r</string>
+    <string name="sort_order_entry_track_number">Nummer</string>
+    <string name="sort_order_entry_duration">Varighed</string>
+    <string name="sort_order_entry_date_added">Dato tilf�jet</string>
+    <string name="sort_order_entry_track_list">Spilleliste</string>
+    <string name="sort_order_entry_number_of_songs">Antal sange</string>
+    <string name="sort_order_entry_number_of_albums">Antal albums</string>
+    <string name="sort_order_entry_filename">Filnavn</string>
+
+    <string name="error_playing_track">Fejl under afspilning</string>
+
+    <string name="playlist_last_added">Senest tilf�jet</string>
+    <string name="playlist_recently_played">Afspillet for nylig</string>
+    <string name="playlist_top_tracks">Mine Top Numre</string>
+
+    <string name="timber_source">Rapport�r eventuelle fejl <u> her </u> </string>
+    <string name="timber_feature_request">Bed om nye features via Google+ f�llesskabet <u> her </u></string>
+
+    <string name="menu_show_as">Vis som</string>
+    <string name="menu_show_as_entry_list">Liste</string>
+    <string name="menu_show_as_entry_grid">Gitter</string>
+
+    <string name="light">Lyst</string>
+    <string name="dark">M�rkt</string>
+    <string name="black">Sort</string>
+
+    <string name="last_opened">Sidst �bnet</string>
+
+    <string name="songs">Sange</string>
+    <string name="albums">Albums</string>
+    <string name="artists">Kunstnere</string>
+    <string name="library">Bibliotek</string>
+    <string name="playlists">Afspilningslister</string>
+    <string name="playing_queue">Afspilningsk�</string>
+    <string name="now_playing">Afspilles Nu</string>
+    <string name="settings">Indstillinger</string>
+    <string name="about">Om</string>
+    <string name="help_and_feedback">Hj�lp og Feedback</string>
+    <string name="search">S�g</string>
+    <string name="action_shuffle_all">Bland Alle</string>
+    <string name="action_equalizer">Equalizer</string>
+    <string name="search_library">S�g i Bibliotek</string>
+
+    <string name="select_theme">V�lg Tema</string>
+    <string name="choose_theme_throughout">V�lg et tema til appen.</string>
+    <string name="choose_start_page">V�lg en startside, der vises ved opstart.</string>
+    <string name="start_page">Startside</string>
+    <string name="artist_in_grid">Kunstnere i Gitter</string>
+    <string name="toggle_artists_grid">V�lg for visning af kunstnere i et 2x2 gitter.</string>
+    <string name="toggle_system_animations">V�lg for systemanimationer i appen.</string>
+    <string name="system_animations">Systemanimationer</string>
+    <string name="toggle_animations">V�lg for Overgangsanimation i appen.</string>
+    <string name="animations">Animationer</string>
+    <string name="now_playing_selector">V�lg en Afspilles Nu sk�rm blandt 4 udseender.</string>
+    <string name="personalisation">Personalisering</string>
+    <string name="other">Andet</string>
+    <string name="advanced">Avanceret</string>
+    <string name="timber_about_opensource">er en open source Musikafspiller udviklet af.</string>
+    <string name="summary_pause_detach">V�lg for at pause afspilning n�r hovedtelefoner frakobles</string>
+    <string name="pause_detach">Pause ved Frakobling</string>
+    <string name="summary_xposed_trackselector">Kr�ver Xposed og XMediaNotificationTrackSelector Xposed modul installeret. Dette giver adgang til afspilningsk�en fra selve notifikationslinjen.</string>
+    <string name="xposed_trackselector">Afspilningsk� underst�ttelse i notifikation</string>
+    <string name="currently_selected">Valgt</string>
+
+    <string name="dark_theme">M�rkt Tema</string>
+    <string name="dark_theme_summary">Anvend et m�rkt tema i appen</string>
+
+    <string name="primary_color">Prim�r Farve</string>
+    <string name="primary_color_summary">�ndr den prim�re temafarve</string>
+
+    <string name="accent_color">Accent Farve</string>
+    <string name="accent_color_summary">�ndr accent temafarven</string>
+
+    <string name="colored_status_bar">Farvet Statuslinje</string>
+    <string name="colored_status_bar_summary">V�lg statuslinje farvning</string>
+
+    <string name="colored_nav_bar">Farvet Navigationslinje</string>
+    <string name="colored_nav_bar_summary">V�lg navigationslinje farvning</string>
+
+    <string name="count_song"><xliff:g id="count">%d</xliff:g> sang</string>
+    <string name="count_songs"><xliff:g id="count">%d</xliff:g> sange</string>
+    <string name="count_album"><xliff:g id="count">%d</xliff:g> album</string>
+    <string name="count_albums"><xliff:g id="count">%d</xliff:g> albums</string>
+    <string name="count_artist"><xliff:g id="count">%d</xliff:g> kunstner</string>
+    <string name="count_artists"><xliff:g id="count">%d</xliff:g> kunstnere</string>
+
+    <string name="number_song_add_queue"><xliff:g example="1" id="number">%d</xliff:g> sang tilf�jet til k�en.</string>
+    <string name="number_songs_add_queue"><xliff:g example="1" id="number">%d</xliff:g> sange tilf�jet til k�en.</string>
+    <string name="number_song_add_playlist"><xliff:g example="1" id="number">%d</xliff:g> sang tilf�jet til afspilningslisten.</string>
+    <string name="number_songs_add_playlist"><xliff:g example="1" id="number">%d</xliff:g> sange tilf�jet til afspilningslisten.</string>
+
+</resources>

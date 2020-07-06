@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.emot.emotionPlayer">
+
+    <application
+        android:name=".emotApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="EBM Player"
+        android:theme="@style/AppTheme.FullScreen.Light"
+        tools:replace="android:allowBackup, android:label">
+        <activity android:name="Info.Profile"></activity>
+        <activity android:name="Info.SignUp" />
+        <activity android:name="emot.emotionPlayer.welcome.welcome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.CATEGORY_APP_MUSIC" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="emotionDetect.emotion.emotion_Main" />
+        <activity android:name="Info.Login" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="EBM Player"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="file" />
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="application/ogg" />
+                <data android:mimeType="application/x-ogg" />
+                <data android:mimeType="application/itunes" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="application/ogg" />
+                <data android:mimeType="application/x-ogg" />
+                <data android:mimeType="application/itunes" />
+            </intent-filter>
+            <intent-filter android:priority="-1">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="content" />
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="application/ogg" />
+                <data android:mimeType="application/x-ogg" />
+                <data android:mimeType="application/itunes" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:theme="@style/AppThemeNormalLight" />
+        <activity
+            android:name=".activities.PlaylistDetailActivity"
+            android:theme="@style/AppTheme.FullScreen.Light" />
+        <activity
+            android:name=".activities.SearchActivity"
+            android:theme="@style/AppThemeNormalLight" />
+        <activity
+            android:name=".activities.NowPlayingActivity"
+            android:theme="@style/AppTheme.FullScreen.Light" />
+        <activity
+            android:name=".cast.ExpandedControlsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.ExpandedCastController" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="@string/fabric_api_key" /> <!-- Music service -->
+        <meta-data
+            android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
+            android:value="com.emot.emotionPlayer.cast.CastOptionsProvider" />
+
+        <receiver android:name=".helpers.MediaButtonIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+            </intent-filter>
+        </receiver> <!-- use your own api key for fabric -->
+        <receiver
+            android:name=".widgets.desktop.StandardWidget"
+            android:label="@string/widget_standard">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.emot.emotionPlayer.metachanged" />
+                <action android:name="com.emot.emotionPlayer.playstatechanged" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_standard" />
+        </receiver>
+        <receiver
+            android:name=".widgets.desktop.WhiteWidget"
+            android:label="@string/widget_white">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.emot.emotionPlayer.metachanged" />
+                <action android:name="com.emot.emotionPlayer.playstatechanged" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_white" />
+        </receiver>
+        <receiver
+            android:name=".widgets.desktop.SmallWidget"
+            android:label="@string/widget_small">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.emot.emotionPlayer.metachanged" />
+                <action android:name="com.emot.emotionPlayer.playstatechanged" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_small" />
+        </receiver>
+
+        <service
+            android:name=".MusicService"
+            android:label="@string/app_name"
+            android:process=":main" />
+        <service
+            android:name=".WearBrowserService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+    </application>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <uses-sdk tools:overrideLibrary="de.Maxr1998.trackselectorlib" />
+
+</manifest>

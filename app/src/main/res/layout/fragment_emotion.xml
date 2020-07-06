@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="5dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="80dp"
+                android:padding="30dp">
+
+
+                <Button
+                    android:id="@+id/btn_happy"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edittext_bg_focused"
+
+
+
+                    android:text="Detect Emotion" />
+
+                <Button
+                    android:id="@+id/btn_neutral"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="-230dp"
+                    android:layout_marginTop="100dp"
+
+                    android:layout_toRightOf="@id/btn_happy"
+                    android:backgroundTint="#02ADBF"
+                    android:text="Neutral"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btn_sad"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+
+                    android:layout_marginLeft="63dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_toRightOf="@id/btn_neutral"
+                    android:backgroundTint="#02ADBF"
+                    android:text="Sad"
+                    tools:visibility="invisible" />
+            </RelativeLayout>
+
+
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>
